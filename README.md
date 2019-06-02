@@ -16,7 +16,7 @@ python manage.py runserver
 
 for searching a movie through name use:-
 
--> type the movie name in the search box (case sensitive). the list will appear.
+-> type the movie name in the search box (case sensitive eg:Avengers not avengers). the list will appear.
 
 to search movie id through api use:-
 
