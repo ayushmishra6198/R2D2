@@ -1,0 +1,32 @@
+{% block content %}
+
+	<h1> Movies list </h1>
+	<p>Welcome to <em>Movies Ratings</em>
+
+        <form role="form" method="GET" action="moviesapp" id="searchmovie">
+            {% csrf_token %} 
+             <strong>
+                 <input id="searchmovie" type=text  name="movie" />
+             </strong>
+            <button type="Submit"> Search </button>
+         </form>
+
+	 <p> Movies Listed in db </p>
+
+	 <ul>
+             <li><strong>Movie Name </strong> <strong>(Ratings) </strong> 
+             </li>
+             <br>
+             
+             {% for mov in movies %}
+                <li>
+   		 {{ mov.movie_name }}   (Ratings -> {{ mov.movie_ratings }}) {{ mov.movie_cast }}
+   		 </li>
+   		 <br>
+   	 {% endfor %}
+ 	 </ul>
+
+ 	 <br>
+ 	 
+ 	 
+{% endblock %}
